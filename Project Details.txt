@@ -1,0 +1,40 @@
+Step I : Deploy the sample application on EC2 server and test if it is working fine.
+
+Step II : Containerise the application using Docker container.
+
+Step III: Use Jenkins to automate the process.
+
+
+Step I :- 1. Create a Ubuntu ec2 instance and connect it,
+             make sure the inboud rule for port 8080 is added.
+          2. Since app is flask we will check if Python is installed or not.
+             Python3 --version
+          3. Now check if flask or pip is installed or not
+             pip3 --version
+             if not installed then update the system first and install it.
+             sudo apt-get update
+             sudo apt install python3-pip
+             pip3 install flask
+          4. Now check if git is installed or not follow the same process.
+             git --version
+             If it is installed then clone the sample code from git using command
+             git clone [link of the repo]
+          5. Now run the application see if it is running or not.
+             python3 app.py[name of the application or file]
+             use the public ip of the instance it will show the page is running fine.
+             
+
+Step II :- 1. Check if Docker is installed on you ubuntu instance or not if not use command.
+              curl -fsSL https://get.docker.com -o get-docker.sh
+              sudo sh get-docker.sh
+           2. Now cd into git file and cat docker doc since we have already written the docker commands.
+           3. Check if any image is there or container is running or not.
+              sudo docker image/ps 
+           4. Now build a image of that docker file that you have in your current directory(.)
+              sudo docker build -t project_1/flaskapp .
+           5. to run the image use command 
+              sudo docker run -d -p 80:8080 project_1/flaskapp (-d = run in background; -p = mapping port)
+              Now if you paste the public ip only in you browser it will respond. 
+
+
+
