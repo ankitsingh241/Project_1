@@ -14,7 +14,7 @@ Step I :- 1. Create a Ubuntu ec2 instance and connect it,
              if not installed then update the system first and install it.
              sudo apt-get update
              sudo apt install python3-pip
-             pip3 install flask
+             sudo pip3 install flask
           4. Now check if git is installed or not follow the same process.
              git --version
              If it is installed then clone the sample code from git using command
@@ -34,7 +34,27 @@ Step II :- 1. Check if Docker is installed on you ubuntu instance or not if not 
               sudo docker build -t project_1/flaskapp .
            5. to run the image use command 
               sudo docker run -d -p 80:8080 project_1/flaskapp (-d = run in background; -p = mapping port)
-              Now if you paste the public ip only in you browser it will respond. 
+              Now if you paste only the public ip in you browser it will respond without mentioning port 8080.
+
+
+
+Step III :- 1. Go to pkg.jenkins.io
+               select debian-stable/
+               follow those commands and install jenkins.
+            2. To start the services of jenkins use these commands
+               sudo systemctl start jenkins
+               sudo systemctl enable jenkins
+               sudo systemctl status jenkins
+               it will show active and running jenkins.
+            3. sudo cat [the path that is showing on jenkins page].
+               set-up and finish the plug-in installations.
+            4. 
+
+
+
+
+
+
 
 
 

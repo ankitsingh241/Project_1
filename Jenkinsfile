@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('Jenkins_Docker')
+    DOCKERHUB_CREDENTIALS = credentials('ankit_docker_jenkins')
     }
     stages { 
 
