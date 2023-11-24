@@ -48,7 +48,14 @@ Step III :- 1. Go to pkg.jenkins.io
                it will show active and running jenkins.
             3. sudo cat [the path that is showing on jenkins page].
                set-up and finish the plug-in installations.
-            4. 
+            4. Add docker credentials.
+               username and password not token.
+            5. The user jenkins need to be added in group docker so use command
+               sudo usermod -a -G docker jenkins
+               sudo systemctl restart jenkins
+            6. Now you can add the git url in pipeline script from SCM
+               since I have written it already in my repo.
+            7. Build the pipeline and you will see a image will reflect on your dockerhub account.
 
 
 
